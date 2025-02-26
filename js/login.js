@@ -9,7 +9,7 @@ document
 
     if (accountNumber.length === 11) {
       if (convertedAccPin === 1234) {
-        window.location.href = "index.html";
+        window.location.href = "main.html";
       } else {
         alert("Enter Valid Pin");
       }
