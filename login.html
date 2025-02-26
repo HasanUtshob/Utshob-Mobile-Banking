@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utshob Bank</title>
+
+    <!-- daisy ui & Tailwind  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-600">
+    <main class="max-w-md bg-slate-50 mx-auto">
+      <header class="mx-auto relative">
+        <img class="mx-auto pt-[40px]" src="Img/bg.png" alt="" />
+        <img
+          class="mx-auto absolute -mt-[280px] ml-[185px]"
+          src="Img/Group.png"
+          alt=""
+        />
+        <img
+          class="absolute w-[300px] -mt-[190px] ml-[80px]"
+          src="Img/logo.png"
+          alt=""
+        />
+      </header>
+
+      <!-- login form start -->
+      <section>
+        <h1 class="text-center text-3xl bg-fuchsia-300 text-blue-950 font-bold">
+          LOGIN YOUR BANK ACCOUNT
+        </h1>
+        <div class="hero bg-base-200">
+          <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-bold">Account Number</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="account-number"
+                    value="52658595481"
+                    placeholder="Account Number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-bold">PIN</span>
+                  </label>
+                  <input
+                    type="password"
+                    value="1234"
+                    id="pin-number"
+                    placeholder="PIN"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="login-btn" class="btn btn-primary">Login</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="mt-5">
+        <p class="text-center text-[20px] font-bold text-red-400">
+          All rights reserved
+        </p>
+      </footer>
+    </main>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

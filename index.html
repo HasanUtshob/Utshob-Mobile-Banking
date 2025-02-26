@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome To Bank Utshob</title>
+    <!-- daisy ui & Tailwind  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-600">
+    <main class="max-w-md bg-slate-50 mx-auto">
+      <header>
+        <nav class="flex justify-between items-center">
+          <div class="ml-3">
+            <img src="Img/Group.png" alt="" />
+          </div>
+          <div>
+            <h1 class="text-2xl font-semibold">
+              ৳ <span id="main-balance">0</span>
+            </h1>
+            <p>Available Balance</p>
+          </div>
+          <button id="logout-btn" class="btn mr-3">LogOut</button>
+        </nav>
+      </header>
+      <hr />
+
+      <!-- heading Option -->
+      <section class="mb-8">
+        <div class="mt-8 p-4">
+          <h1 class="text-3xl font-bold text-red-400">
+            Welcome To UTSHOB Bank
+          </h1>
+          <p class="font-semibold text-[20px]">
+            Ki Bepar Tk tulben Naki ? Ha Ha Ha
+          </p>
+        </div>
+      </section>
+
+      <!-- Menu Option -->
+      <section class="grid grid-cols-3 gap-1 mb-8">
+        <div
+          id="addmoney-box"
+          class="box border rounded-md p-2 text-center ml-1 cursor-pointer"
+        >
+          <div class="mx-w-[24px]">
+            <img class="mx-auto" src="Img/addmoney.png" alt="Add money" />
+          </div>
+          <p>Add Money</p>
+        </div>
+        <div
+          id="cashout-box"
+          class="box border rounded-md p-2 text-center cursor-pointer"
+        >
+          <div class="mx-w-[24px]">
+            <img class="mx-auto" src="Img/cashout.png" alt="Add money" />
+          </div>
+
+          <p>Cash Out</p>
+        </div>
+        <div class="box border rounded-md p-2 text-center mr-1 cursor-pointer">
+          <div class="mx-w-[24px]">
+            <img class="mx-auto" src="Img/transfer.png" alt="Add money" />
+          </div>
+          <p>Transfer Money</p>
+        </div>
+        <div class="box border rounded-md p-2 text-center ml-1 cursor-pointer">
+          <div class="mx-w-[24px]">
+            <img class="mx-auto" src="Img/bonus1.png" alt="Add money" />
+          </div>
+          <p>Get Bonus</p>
+        </div>
+        <div class="box border rounded-md p-2 text-center cursor-pointer">
+          <div class="mx-w-[24px]">
+            <img class="mx-auto" src="Img/paybill.png" alt="Add money" />
+          </div>
+          <p>Pay Bill</p>
+        </div>
+        <div class="box border rounded-md p-2 text-center mr-1 cursor-pointer">
+          <div class="mx-w-[24px]">
+            <img class="mx-auto" src="Img/transaction1.png" alt="Add money" />
+          </div>
+          <p>Transaction</p>
+        </div>
+      </section>
+
+      <!-- Add Money Section start -->
+
+      <section id="add-money">
+        <h1 class="text-center text-[24px] font-bold text-orange-500">
+          Add Your Money
+        </h1>
+
+        <div class="hero bg-base-200">
+          <div class="hero-content">
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-bold">Select Your Bank</span>
+                  </label>
+                  <select class="select select-bordered">
+                    <option disabled selected>Select Your Bank</option>
+                    <option>Bkash</option>
+                    <option>Nagad</option>
+                    <option>Rocket</option>
+                    <option>Upay</option>
+                    <option>DBBL</option>
+                  </select>
+                  <label class="label">
+                    <span class="label-text font-bold">Account Number</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="account-number"
+                    placeholder="Account Number"
+                    class="input input-bordered"
+                    required
+                  />
+
+                  <label class="label">
+                    <span class="label-text font-bold">Enter Your Amount</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="input-amount"
+                    placeholder="Enter Your Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-bold">PIN</span>
+                  </label>
+                  <input
+                    type="password"
+                    id="pin-number"
+                    placeholder="PIN"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="addmoney-btn" class="btn btn-primary">
+                    Add Money
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cashout Section Start -->
+      <section id="cashout-money">
+        <h1 class="text-center text-[24px] font-bold text-orange-500">
+          CashOut Your Money
+        </h1>
+
+        <div class="hero bg-base-200">
+          <div class="hero-content">
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-bold">Select Your Bank</span>
+                  </label>
+                  <select class="select select-bordered">
+                    <option disabled selected>Select Your Bank</option>
+                    <option>Bkash</option>
+                    <option>Nagad</option>
+                    <option>Rocket</option>
+                    <option>Upay</option>
+                    <option>DBBL</option>
+                  </select>
+                  <label class="label">
+                    <span class="label-text font-bold">Account Number</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="acc-number"
+                    placeholder="Account Number"
+                    class="input input-bordered"
+                    required
+                  />
+
+                  <label class="label">
+                    <span class="label-text font-bold">Enter Your Amount</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="cashout-amount"
+                    placeholder="Enter Your Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-bold">PIN</span>
+                  </label>
+                  <input
+                    type="password"
+                    id="accpin-number"
+                    placeholder="PIN"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="cashout-btn" class="btn btn-primary">
+                    Withdraw
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/toggole.js"></script>
+    <script src="js/add-money.js"></script>
+    <script src="js/cashout.js"></script>
+  </body>
+</html>
